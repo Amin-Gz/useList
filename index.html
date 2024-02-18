@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Vite App</title>
+  </head>
+  <body
+    class="w-screen lg:h-screen bg-slate-200 dark:bg-slate-700 flex flex-col lg:flex-row justify-around items-center gap-14 py-5 px-2 sm:px-[20%] lg:p-14"
+  >
+    <!-- left Container -->
+    <div
+      class="w-full lg:w-[450px] h-[700px] lg:h-[700px] bg-[#5570E8] relative rounded-md shadow-md"
+    >
+      <ul class="w-full rounded-t-md" id="ulList">
+        <li
+          class="borderAfter h-[108px] relative flex gap-7 px-5 py-3 items-center cursor-pointer hover:bg-[#e9e9e9]"
+        ></li>
+        <li
+          class="borderAfter h-[108px] relative flex gap-7 px-5 py-3 items-center cursor-pointer hover:bg-[#e9e9e9]"
+        ></li>
+        <li
+          class="borderAfter h-[108px] relative flex gap-7 px-5 py-3 items-center cursor-pointer hover:bg-[#e9e9e9]"
+        ></li>
+        <li
+          class="borderAfter h-[108px] relative flex gap-7 px-5 py-3 items-center cursor-pointer hover:bg-[#e9e9e9]"
+        ></li>
+        <li
+          class="borderAfter h-[108px] relative flex gap-7 px-5 py-3 items-center cursor-pointer hover:bg-[#e9e9e9]"
+        ></li>
+        <li
+          class="borderAfter h-[108px] relative flex gap-7 px-5 py-3 items-center cursor-pointer hover:bg-[#e9e9e9]"
+        ></li>
+      </ul>
+      <div
+        class="items flex w-full h-[52px] bg-[#4286f4] text-[#ffffff] absolute bottom-0 rounded-b-md p-3 justify-around"
+      >
+        <a href="#" class="text-[20px] disable" id="prv"> \/ </a>
+        <p class="text-[20px]" id="pageNum">1</p>
+        <a href="#" class="text-[20px]" id="next"> /\ </a>
+      </div>
+    </div>
+    <!-- right container -->
+    <div
+      class="w-full lg:w-[700px] lg:h-[700px] flex flex-col justify-between gap-14"
+    >
+      <!-- contUp -->
+      <div
+        class="w-full h-[320px] bg-[#5570E8] rounded-md px-4 pt-1 pb-3 shadow-md"
+      >
+        <h2 class="text-[40px] tracking-wide text-white">Create user</h2>
+        <form
+          action=""
+          class="grid grid-cols-2 grid-rows-4 gap-1 gap-x-3"
+          id="form"
+        >
+          <label for="" class="pt-3">Name:</label>
+          <label for="" class="pt-3">Last Name:</label>
+          <input
+            type="text"
+            placeholder="John"
+            class="rounded-md outline-none h-[35px] mr-4 pl-2"
+            id="fName"
+          />
+          <input
+            type="text"
+            placeholder="Black"
+            class="rounded-md outline-none h-[35px] pl-2"
+            id="lName"
+          />
+          <label for="" class="pt-3"> Email:</label>
+          <label for="" class="pt-3"> Avatar:</label>
+          <input
+            type="text"
+            placeholder="John01@yahoo.com"
+            class="rounded-md outline-none h-[35px] mr-4 pl-2"
+            id="Email"
+          />
+          <input
+            type="file"
+            class="rounded-md bg-white pt-[3.5px] pl-2"
+            accept="image/png, image/HEIC, image/jpeg"
+            id="avatar"
+          />
+          <button
+            type="submit"
+            class="bg-[#4286f4] mt-5 active:bg-blue-600 translate-x-[90px] lg:translate-x-[170px] py-2 rounded-md"
+            id="postBtn"
+          >
+            submit
+          </button>
+        </form>
+      </div>
+      <!-- contDown -->
+      <div
+        class="w-full lg:h-[320px] bg-[#5570E8] rounded-md px-5 pt-1 pb-[20px] shadow-md hidden"
+        id="userDetailsParentDiv"
+      >
+        <h2
+          class="relative text-[40px] mb-[10px] tracking-wide ml-3 text-white"
+        >
+          User Details
+          <a href="#" class="absolute right-0" id="closeBtn">X</a>
+        </h2>
+        <div
+          class="itm flex flex-col lg:flex-row justify-around items-center gap-7"
+          id="userDetailsChildDiv"
+        >
+          <img
+            src=""
+            alt="avatar"
+            class="xl:w-[220px] w-[180px] lg:w-[133px] lg:h-[133px] h-[180px] xl:h-[220px] rounded-full bg-slate-200 shadow-md border-2 border-black"
+            id="imgDetail"
+          />
+          <div
+            class="max-w-[320px] w-[70%] min-w-[320px] h-[220px] border border-black py-3 px-2 shadow-lg"
+          >
+            <p class="text-[14px] leading-tight text-[#242424] relative">
+              Name:
+              <a
+                href="#"
+                id="deleteUserBtn"
+                class="absolute right-0 py-1 px-2 border border-black"
+              >
+                Delete</a
+              >
+            </p>
+            <p
+              class="text-[24px] font-[200] leading-tight pl-[6px]"
+              id="fnDetail"
+            ></p>
+            <p
+              class="text-[24px] font-[200] leading-tight pl-[6px]"
+              id="lnDetail"
+            ></p>
+            <p class="text-[14px] leading-tight mt-[6px] text-[#242424]">Id:</p>
+            <p
+              class="text-[24px] font-[200] leading-tight pl-[6px]"
+              id="idDetail"
+            ></p>
+            <p class="text-[14px] leading-tight mt-[6px] text-[#242424]">
+              Email:
+            </p>
+            <p
+              class="text-[24px] font-[200] leading-tight pl-[6px]"
+              id="mailDetail"
+            ></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
